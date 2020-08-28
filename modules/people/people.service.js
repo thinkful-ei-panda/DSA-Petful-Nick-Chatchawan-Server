@@ -6,10 +6,6 @@ const store = require('../../store');
 
 const people = new Queue();
 store.people.forEach((person) => people.enqueue(person));
-console.log(people.dequeue());
-console.log(people.show());
-console.log(people.all());
-console.log(people);
 
 // --------------------
 
