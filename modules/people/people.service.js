@@ -10,24 +10,24 @@ store.people.forEach((person) => people.enqueue(person));
 
 // --------------------
 
-setInterval(generateInteraction(), 5000);
+// setInterval(generateInteraction(), 5000);
 
-function generateInteraction() {
-  if (store.people.includes(people.show())) {
-    people.enqueue(people.dequeue());
+// function generateInteraction() {
+//   if (store.people.includes(people.show())) {
+//     people.enqueue(people.dequeue());
 
-    const roll = getRandomInt(2);
+//     const roll = getRandomInt(2);
 
-    if (roll === 0)
-      Pets.dequeue('cat');
-    if (roll === 1)
-      Pets.dequeue('dog');
-    if (roll === 2) {
-      Pets.dequeue('cat');
-      Pets.dequeue('dog');
-    }
-  }
-}
+//     if (roll === 0)
+//       Pets.dequeue('cat');
+//     if (roll === 1)
+//       Pets.dequeue('dog');
+//     if (roll === 2) {
+//       Pets.dequeue('cat');
+//       Pets.dequeue('dog');
+//     }
+//   }
+// }
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
