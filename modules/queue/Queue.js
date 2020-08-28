@@ -15,21 +15,31 @@ class Queue {
   enqueue(data) {
     // Add some data to the queue.
     const newNode = new _Node(data, null);
-    this.head === null ? this.head = newNode : this.tail.next = newNode;
+    this.head === null ? (this.head = newNode) : (this.tail.next = newNode);
     this.tail = newNode;
   }
 
   dequeue() {
-    // Remove some data from the queue.
-
+    // Remove some data from the queue
+    const value = this.head.data;
+    this.head = this.head.next;
+    return value;
   }
 
   show() {
-    // Return the next item in the queue.
+    // Return the next item in the queue
+    return this.head.data;
   }
 
   all() {
-    // Return all items in the queue.
+    // Return all items in the queue
+    const queueArray = [];
+    let pointer = this.head;
+    while (pointer !== null) {
+      queueArray.push(pointer.data);
+      pointer = pointer.next;
+    }
+    return queueArray;
   }
 }
 

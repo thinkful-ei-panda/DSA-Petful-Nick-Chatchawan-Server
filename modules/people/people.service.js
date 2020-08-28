@@ -5,7 +5,10 @@ const store = require('../../store');
 // --------------------
 
 const people = new Queue();
-store.people.forEach(person => people.enqueue(person));
+store.people.forEach((person) => people.enqueue(person));
+console.log(people.dequeue());
+console.log(people.show());
+console.log(people.all());
 console.log(people);
 
 // --------------------
@@ -13,6 +16,7 @@ console.log(people);
 module.exports = {
   get() {
     // Return all people in the queue.
+    return people.all();
   },
 
   enqueue(person) {
@@ -21,5 +25,5 @@ module.exports = {
 
   dequeue() {
     // Remove a person from the queue.
-  }
+  },
 };
