@@ -1,3 +1,5 @@
+const e = require("express");
+
 class _Node {
   constructor(data, next) {
     this.data = data;
@@ -21,6 +23,9 @@ class Queue {
 
   dequeue() {
     // Remove some data from the queue
+    if (this.head === null)
+      return 'Queue is empty';
+
     const value = this.head.data;
     this.head = this.head.next;
     return value;
