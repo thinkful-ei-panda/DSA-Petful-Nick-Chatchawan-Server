@@ -18,8 +18,7 @@ router.delete('/', json, (req, res) => {
   const { type } = req.body;
   Pets.dequeue(type);
   People.dequeue();
-
-  res.status(204).end();
+  res.status(200).send(type);
 });
 
 module.exports = router;
