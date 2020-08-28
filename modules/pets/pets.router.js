@@ -7,7 +7,7 @@ const People = require('../people/people.service');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  // Return all pets currently up for adoption.
+  // Return all pets currently up for adoption....
   res
     .status(200)
     .send(Pets.get());
