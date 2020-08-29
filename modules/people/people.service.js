@@ -10,6 +10,8 @@ store.people.forEach((person) => people.enqueue(person));
 
 // --------------------
 
+let count = 0;
+
 function generateInteraction() {
   if (store.people.includes(people.show())) {
     people.enqueue(people.dequeue());
@@ -22,6 +24,13 @@ function generateInteraction() {
       Pets.dequeue('cat');
       Pets.dequeue('dog');
     }
+  } else {
+    if (count >= 5) {
+      count = 0;
+      people.dequeue();
+    }
+
+    count++;
   }
 }
 
