@@ -14,7 +14,8 @@ let count = 0;
 
 function generateInteraction() {
   if (store.people.includes(people.show())) {
-    people.enqueue(people.dequeue());
+    people.dequeue();
+    people.enqueue(store.people[getRandomInt(2)]);
 
     const roll = getRandomInt(2);
 
