@@ -1,6 +1,6 @@
 const Queue = require('../queue/Queue');
 const store = require('../../store');
-const Pets = require('./pets.service');
+const Pets = require('../pets/pets.service');
 
 // Set up initial data.
 // --------------------
@@ -10,18 +10,14 @@ store.people.forEach((person) => people.enqueue(person));
 
 // --------------------
 
-setInterval(generateInteraction(), 5000);
-
 function generateInteraction() {
   if (store.people.includes(people.show())) {
     people.enqueue(people.dequeue());
 
     const roll = getRandomInt(2);
 
-    if (roll === 0)
-      Pets.dequeue('cat');
-    if (roll === 1)
-      Pets.dequeue('dog');
+    if (roll === 0) Pets.dequeue('cat');
+    if (roll === 1) Pets.dequeue('dog');
     if (roll === 2) {
       Pets.dequeue('cat');
       Pets.dequeue('dog');
@@ -32,6 +28,8 @@ function generateInteraction() {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+
+setInterval(generateInteraction, 5000);
 
 module.exports = {
   get() {
