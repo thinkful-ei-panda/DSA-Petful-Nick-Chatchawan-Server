@@ -3,7 +3,16 @@ module.exports = {
     'Randy Lahey',
     'Trevor Cory',
     'Jim Lahey',
-    'Bob Bobston'
+    'Bob Bobston',
+    'Pooh Bear',
+    'Nicholas Bombastus',
+    'Link',
+    'Zelda',
+    'Ganon',
+    'Person looking for a pet',
+    'not a real person',
+    'actually another dog looking for a friend',
+    'The Annoying Dog from Undertale'
   ],
 
   dogs: [
