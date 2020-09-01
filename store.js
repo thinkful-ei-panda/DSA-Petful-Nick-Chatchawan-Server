@@ -1,8 +1,6 @@
 module.exports = {
   people: [
     'Nicholas Bombastus',
-    'Link',
-    'Zelda',
     'not a real person',
     'actually another dog looking for a friend',
     'The Annoying Dog from Undertale',
